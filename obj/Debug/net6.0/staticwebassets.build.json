@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e23hFIk0YJXZDZbjATGH9ipuXXDnbolIwx/Q1kvyFXc=",
+  "Hash": "LQmYpNAz/WsbteKADQp8PLTxMkQuNtblhe0WnoW5BiQ=",
   "Source": "Fidly",
   "BasePath": "_content/Fidly",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Projects\\Fidly\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Fidly.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Projects\\Fidly\\wwwroot\\css\\bootstrap-lumen.css",
+      "SourceId": "Fidly",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\Fidly\\wwwroot\\",
+      "BasePath": "_content/Fidly",
+      "RelativePath": "css/bootstrap-lumen.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap-lumen.css"
     },
     {
       "Identity": "C:\\Projects\\Fidly\\wwwroot\\css\\site.css",

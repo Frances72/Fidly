@@ -1,3 +1,5 @@
+namespace Fidly.Models;
+
 public class  Movie
 {
     public int Id { get; set; }
