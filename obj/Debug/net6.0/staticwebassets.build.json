@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LQmYpNAz/WsbteKADQp8PLTxMkQuNtblhe0WnoW5BiQ=",
+  "Hash": "KN7ms5FAqmteQ4r8gQoxDX8ZW2dXEXfoktILXsw9oT4=",
   "Source": "Fidly",
   "BasePath": "_content/Fidly",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap-lumen.css"
+    },
+    {
+      "Identity": "C:\\Projects\\Fidly\\wwwroot\\css\\darkly.css",
+      "SourceId": "Fidly",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projects\\Fidly\\wwwroot\\",
+      "BasePath": "_content/Fidly",
+      "RelativePath": "css/darkly.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\darkly.css"
     },
     {
       "Identity": "C:\\Projects\\Fidly\\wwwroot\\css\\site.css",
