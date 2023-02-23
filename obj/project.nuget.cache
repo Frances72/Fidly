@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SPbtQpM22KwaL06c/y4SRK9TtRkqkxPxF8dL0EmdYy+C/W1OOE9ACQ0q4g7I5bGx1r44ukYJ5j7iEgi2zcw7Ww==",
+  "dgSpecHash": "FzVQW6eQ54xTstLLCykZ7af2MiKJR2FaTdfdID9ueOdRle+TEc/Tx0euvMI/o4aHoU5jAZrGezCGsKV29EP04w==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Fidly\\Fidly.csproj",
+  "projectFilePath": "c:\\Projects\\Fidly\\Fidly.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Frances\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Frances\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

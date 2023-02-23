@@ -3619,11 +3619,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Fidly\\Fidly.csproj",
+      "projectUniqueName": "c:\\Projects\\Fidly\\Fidly.csproj",
       "projectName": "Fidly",
-      "projectPath": "C:\\Projects\\Fidly\\Fidly.csproj",
+      "projectPath": "c:\\Projects\\Fidly\\Fidly.csproj",
       "packagesPath": "C:\\Users\\Frances\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Fidly\\obj\\",
+      "outputPath": "c:\\Projects\\Fidly\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Frances\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3693,7 +3693,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.308\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.309\\RuntimeIdentifierGraph.json"
       }
     }
   }
