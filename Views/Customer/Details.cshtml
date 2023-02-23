@@ -10,8 +10,23 @@
     <p>404 = Not Found() - No Customer for this index.</p>
 }
 else 
-{
-    <h2>@Model.Name</h2>
+{    
+    <div>
+        <h2>@Model.Name</h2>       
+    </div>
+    <div>
+        <ul>             
+            <li>
+                Membership Type: @Model.MembershipType.MembershipName
+            </li> 
+            @if(Model.DOB != null)
+           {
+             <li>
+                Date of birth: @Model.DOB
+             </li> 
+            }  
+        </ul>
+    </div>
 }
 
     

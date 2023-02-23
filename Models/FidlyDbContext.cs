@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Fidly.Models;
 
 public partial class FidlyDbContext : DbContext
 {
      //models to add to db
     public DbSet<Customers> Customers { get; set; }
+    public DbSet<MembershipType> MembershipType { get; set; }
+    public DbSet<Genre> Genre { get; set; }
     public DbSet<Movie> Movie { get; set; }
+       
     public FidlyDbContext()
     {  
 
@@ -26,6 +30,13 @@ public partial class FidlyDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+     modelBuilder.Entity<MembershipType>().HasData(
+        new MembershipType(){Id = 1, SignUpFee = 0,DurationInMonths = 0, DiscountRate = 0 , MembershipName = "None"},
+        new MembershipType(){Id = 2, SignUpFee = 30,DurationInMonths = 1, DiscountRate = 10, MembershipName = "Monthly"},
+        new MembershipType(){Id = 3, SignUpFee = 90,DurationInMonths = 3, DiscountRate = 015, MembershipName = "Quaterly"},
+        new MembershipType(){Id = 4, SignUpFee = 300,DurationInMonths = 12, DiscountRate = 20, MembershipName = "Annually"});
+       
         OnModelCreatingPartial(modelBuilder);
     }
 

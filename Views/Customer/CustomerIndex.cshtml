@@ -8,6 +8,10 @@
 
 <h2>Customers</h2>
 
+  <div class="bottom-one">
+        @Html.ActionLink("Add Customer", "CustomerForm", "Customer", null, new {@class ="btn btn-primary"})
+     </div>
+
 @if(!Model.Any())
 {
     <p>We don't have any customers yet.</p>
@@ -18,6 +22,7 @@ else
         <thead>
             <tr>
                 <th>Customer Names</th>
+                <th>Membership Type</th>
             </tr>
         </thead>
         <tbody>
@@ -25,7 +30,10 @@ else
             {
                 <tr>
                     <td>
-                        @Html.ActionLink( person.Name, "Details", "Customer", new {id = person.Id}, null)
+                        @Html.ActionLink( person.Name, "Edit", "Customer", new {id = person.Id}, null)
+                    </td>
+                    <td>
+                        @person.MembershipType.MembershipName
                     </td>
                 </tr>
             }

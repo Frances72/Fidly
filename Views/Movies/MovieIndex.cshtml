@@ -1,4 +1,4 @@
-@model IEnumerable<Fidly.Models.Movie>
+ @model IEnumerable<Fidly.Models.Movie> 
 
 @{
     ViewBag.Title = "Movies";
@@ -6,7 +6,14 @@
 }
 
 <h2>Movies</h2>
-@if(!Model.Any())
+   
+     <div class="bottom-one">
+        @Html.ActionLink("Add Movie", "New", "Movies", null, new {@class ="btn btn-primary"})
+     </div>
+    
+
+
+ @if(!Model.Any()) 
 {
     <p>No movies in the database.</p>
 }
@@ -17,16 +24,19 @@ else
         <tr> <th>Movie</th></tr>
     </thead>
     <tbody>
-          @foreach(var flick in Model)
+          @foreach(var movie in Model)
                 {
                     <tr>
                         <td>
-                            @Html.ActionLink(flick.Name, "Details", "Movies", new {Id = flick.Id }, null)
+                            @Html.ActionLink(movie.Name, "Edit", "Movies", new { id= movie.Id} , null)
+                        </td>
+                        <td>
+                            @movie.Genre.GenreName
                         </td>
                     </tr>
                 }
     </tbody>
-    </table>
+    </table> 
 }       
 
         

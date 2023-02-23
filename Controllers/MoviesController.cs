@@ -1,14 +1,17 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Fidly.Models;
+using Microsoft.EntityFrameworkCore;
+using Fidly.ViewModels;
 
 namespace Fidly.Controllers;
 
 public class MoviesController : Controller
 {  
+   private FidlyDbContext _context = new FidlyDbContext();
    public ActionResult MovieIndex()
    {
-      var movies = GetMovies();
+      var movies = GetMoviesList();
    
       return View(movies);
 
@@ -16,7 +19,7 @@ public class MoviesController : Controller
 
    public ActionResult Details(int id)
    {
-        var movie = GetMovies().SingleOrDefault(c => c.Id == id);
+        var movie = GetMoviesList().SingleOrDefault(c => c.Id == id);
 
         if(Response.Equals(NotFound()))
         {
@@ -25,20 +28,12 @@ public class MoviesController : Controller
 
        return View(movie); 
    }
-
-   private IEnumerable<Movie> GetMovies()
-   {
-    return new List<Movie>
+   
+    private IEnumerable<Movie> GetMoviesList()
     {
-        new Movie{Id = 1, Name = "Shrek"},
-        new Movie{Id = 2, Name = "Constantine"},
-        new Movie{Id = 3, Name = "XXX"},
-        new Movie{Id = 4, Name = "No Time To Die"},
-        new Movie{Id = 5, Name = "Running Man"},
-        new Movie{Id = 6, Name = "Ghost Busters"}       
-    };
-
-   }
+            var movieList = _context.Movie.Include(m => m.Genre).ToList();
+            return movieList;
+    }
    
     public ActionResult Index(int? pageIndex, string sortBy)
     {
@@ -58,5 +53,56 @@ public class MoviesController : Controller
    {
         return Content(year + "/" + month);
    } 
+
+   public ViewResult New()
+   {
+        var genre = _context.Genre.ToList();
+
+        var movieViewModel = new NewMovieViewModel
+        {
+            Genre = genre
+        };
+
+        return View("MovieForm",movieViewModel);
+   }
+
+    public ActionResult Edit(int id)
+    {
+        var movie = _context.Movie.SingleOrDefault(c => c.Id == id);
+
+        if(movie == null)
+        {
+            return NotFound();
+        }
+        var viewModel = new NewMovieViewModel
+        {
+            Movie = movie,
+            Genre = _context.Genre.ToList()
+        };
+
+        return View("MovieForm", viewModel);
+    }
+
+    [HttpPost]
+    public ActionResult Save(Movie movie)
+    {
+        if(movie.Id == 0)
+        {
+            movie.DateEntered = DateTime.Now;
+            _context.Movie.Add(movie);
+        }
+        else
+        {
+            var movieInDb = _context.Movie.Single(m => m.Id == movie.Id);
+            movieInDb.Name = movie.Name;
+            movieInDb.GenreId = movie.GenreId;
+            movieInDb.NumberInStock = movie.NumberInStock;
+            movieInDb.ReleaseDate = movie.ReleaseDate;
+        }
+         _context.SaveChanges();
+        
+        return RedirectToAction("MovieIndex", "Movies");
+    }
+   
    
 }
