@@ -39,6 +39,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Projects/Fidly/Views/Movies/modalPractice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXG1vZGFsUHJhY3RpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Projects/Fidly/Views/Movies/MovieForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXE1vdmllRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
