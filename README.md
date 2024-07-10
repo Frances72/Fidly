@@ -9,7 +9,7 @@ Microsoft.EntityFrameworkCore Version=7.0.0
 Sqlite
 Visual Studio Code:
 
-What you’ll learn
+Concepts covered in the course:
 
     Understand the MVC architectural pattern
     Implement CRUD operations
